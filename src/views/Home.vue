@@ -2,6 +2,6 @@
     <div>
         <h2>home page</h2>
         <p>lorem ipsum</p>
-        <a href="/todos">todos</a>
+        <router-link to="/todos">todos</router-link>
     </div>
 </template>

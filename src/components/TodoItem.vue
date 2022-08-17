@@ -4,7 +4,7 @@
             <input type="checkbox" 
             v-on:change="todo.completed = !todo.completed">
             <strong> {{index + 1}}</strong>>
-            {{todo.title}}
+            {{ utF }}
         </span>
         <button class="rm" v-on:click="$emit('remove-todo', todo.id)">&times;</button>        
     </li>
@@ -18,6 +18,11 @@ export default {
             required: true
         },
         index: Number
+    },
+    computed: {
+        utF() {
+            return this.todo.title.toUpperCase()
+        }
     }
 }
 </script>
